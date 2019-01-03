@@ -1,0 +1,140 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+p
+	margin-bottom: 0
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.button, .btn-submit
+	display: inline-block
+	width: 100%
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: red
+	padding: 15px 45px
+	font-size: 16px
+	text-transform: uppercase
+	font-weight: 600
+	text-align: center
+	position: relative
+	outline: none
+	transition: all .3s ease
+	cursor: pointer
+	&:focus, &:hover
+		text-decoration: none
+		color: #000
+		background-color: #DB7971
+
+.main-content
+	background: url("../img/bg.jpg") no-repeat center
+	background-size: cover
+	height: 100vh
+	padding: 0 15px
+	.top-block
+		display: flex
+		justify-content: space-between
+		align-content: space-between
+	.logo-wrap
+		width: 100px
+		background-color: #fff
+	.contact-info-wrap
+		display: flex
+		> div
+			margin: auto
+			p
+				color: #fff
+				font-size: 18px
+				margin-bottom: 0
+		.email-wrap
+			margin-right: 50px
+	.central-content
+		position: relative
+		.title-block
+			h1
+				display: block
+				line-height: 1
+				margin-bottom: 0
+				font-size: 40px
+				color: #fff
+				text-align: center
+			p
+				font-size: 30px
+				color: #fff
+				text-align: center
+		.form-block
+			width: 400px
+			height: auto
+			position: absolute
+			top: 160px
+			right: 250px
+			margin-bottom: 20px
+			h3
+				color: #fff
+				text-align: center
+				margin-bottom: 20px
+			form
+				background-color: #fff
+				padding: 20px
+			.input-wrap
+				margin-bottom: 15px
+				&:last-child
+					margin-bottom: 0
+			input:not(.btn-submit)
+				display: block
+				width: 100%
+				padding: 5px 10px
+				font-size: 18px
+				color: #000
+				outline: none
+				border: 1px solid #000
+				transition: all .3s ease
+				&:hover, &:focus
+					border-color: red
+
+
+@import "media" // Всегда в конце
