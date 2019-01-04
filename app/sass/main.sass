@@ -151,4 +151,63 @@ body
                     border-color: red
 
 
+.other-content
+    padding-top: 100px
+    padding-bottom: 100px
+    width: 90%
+    margin: auto
+    background-color: #2e6da4
+.other-content__video-btn
+    position: relative
+    width: 95px
+    height: 95px
+    border-radius: 10em
+    border: 3px solid #000
+    cursor: pointer
+    margin: auto
+    transition: .3s ease-in-out
+    &:before
+        content: ''
+        display: block
+        width: 130px
+        height: 130px
+        border-radius: 10em
+        border: 2px solid #fff
+        opacity: .1
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        animation: pulse 1s ease-in-out infinite alternate
+    &:hover
+        transform: scale(1.1)
+        border-color: red
+        background: rgba(0,0,0, .2)
+
+@keyframes pulse
+    0%
+        transform: translate(-50%, -50%) scale(.9)
+    50%
+        transform: translate(-50%, -50%) scale(1)
+    100%
+        transform: translate(-50%, -50%) scale(.9)
+
+.success-wrap
+    display: flex
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 999
+    & ~ *
+        transition: all .5s ease
+    &.active
+        & ~ *
+            opacity: .5
+            filter: blur(10px)
+
+.success-wrap__content
+    margin: auto
+
 @import "media" // Всегда в конце

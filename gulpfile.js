@@ -27,8 +27,10 @@ gulp.task('common-js', function() {
 
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
-		// 'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jQuery/jquery-3.3.1.min.js',
+		'app/libs/jquery.nicescroll/jquery.nicescroll.min.js',
 		'app/libs/particles.js/particles.min.js',
+		'app/libs/waypoints/waypoint.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
